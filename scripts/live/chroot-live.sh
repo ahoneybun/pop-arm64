@@ -33,9 +33,6 @@ sync
 
 info "Setting up casper scripts"
 rm -f /usr/share/initramfs-tools/scripts/casper-bottom/01integrity_check
-sed -i \
-		"s|touch /root/home/\$USERNAME/.config/gnome-initial-setup-done|echo -n \"${GNOME_INITIAL_SETUP_STAMP}\" > /root/home/\$USERNAME/.config/gnome-initial-setup-done|" \
-		/usr/share/initramfs-tools/scripts/casper-bottom/52gnome_initial_setup
 
 update-initramfs -c -k all 2>&1| capture_and_log "updating initramfs"
 

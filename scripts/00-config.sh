@@ -9,12 +9,12 @@ export LC=C.UTF-8
 # Git doesn't like it when you run git commands in the dir of another user, but this should be safe as it's just a read-only command.
 SOURCE_DATE_EPOCH="$(git --git-dir="$PWD/../.git" log -1 --format='%ct' 2> /dev/null || echo "42")"
 DISTRO_NAME=pop-os
-DISTRO_VERSION=22.04
+DISTRO_VERSION=24.04
 DISTRO_VOLUME_LABEL="Pop!_OS ${DISTRO_VERSION} arm64"
 DISTRO_EPOCH="${SOURCE_DATE_EPOCH}"
 DISTRO_DATE="$(date --date=@"${SOURCE_DATE_EPOCH}" +%Y%m%d)"
-UBUNTU_CODE=jammy
-UBUNTU_NAME="Jammy Jellyfish"
+UBUNTU_CODE=noble
+UBUNTU_NAME="Noble Numbat"
 GNOME_INITIAL_SETUP_STAMP=21.04
 
 # Change this for production!

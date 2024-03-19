@@ -1,7 +1,7 @@
 {
 	"os_list": [
 		{
-			"name": "Pop!_OS 22.04",
+			"name": "Pop!_OS 24.04",
 			"default_os_name": "Pop!_OS",
 			"boot_object": "m1n1.bin",
 			"next_object": "m1n1/boot.bin",
@@ -13,7 +13,7 @@
 				{
 					"name": "EFI",
 					"type": "EFI",
-					"size": "500MB",
+					"size": "1GB",
 					"format": "fat",
 					"copy_firmware": true,
 					"copy_installer_data": true,
