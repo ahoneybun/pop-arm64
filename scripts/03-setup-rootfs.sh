@@ -26,6 +26,9 @@ info "Mounting EFI partition"
 LOOP_DEV=$(losetup --find --show --partscan "${BASE_IMG_FILE}")
 mount "${LOOP_DEV}p1" "${ROOTFS_BASE_DIR}/boot/efi"
 
+# Placing the dtbs file for the Thinkpad X13s
+curl https://d-i.debian.org/daily-images/arm64/daily/device-tree/qcom/sc8280xp-lenovo-thinkpad-x13s.dtb > "${ROOTFS_BASE_DIR}/boot/X13.dtb"
+
 info "Bind mounting apt cache"
 mkdir -p "${ROOTFS_BASE_DIR}/var/cache/apt/archives"
 mount --bind "${CACHE_DIR}" "${ROOTFS_BASE_DIR}/var/cache/apt/archives"
